@@ -6,6 +6,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -14,7 +15,7 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                padding: EdgeInsets.fromLTRB(0, 220, 0, 180),
+                padding: EdgeInsets.fromLTRB(0, h*0.3, 0, h*0.22),
                 child: Center(
                   child: Text(
                     'COFFEE',
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
                   ),
                 )),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, h*0.04),
               child: SizedBox(
                 width: 250,
                 height: 60,
@@ -51,7 +52,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, h*0.04),
               child: SizedBox(
                 width: 250,
                 height: 60,
@@ -74,7 +75,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, h*0.04),
               child: SizedBox(
                 width: 250,
                 height: 60,
