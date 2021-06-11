@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'detail.dart';
 
 class All extends StatefulWidget {
   const All({Key? key}) : super(key: key);
@@ -37,11 +38,19 @@ class _AllState extends State<All> {
             padding: EdgeInsets.all(5),
             child: Card(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Detail(image: 'assets/coffee.jpg',
+                          name: all[index * 2], address: all[index * 2 + 1]),
+                    ),
+                  );
+                },
                 child: Column(
                   children: [
                     Text(
-                      all[index*2],
+                      all[index * 2],
                       style: TextStyle(
                         fontFamily: 'SourceSansPro',
                         fontWeight: FontWeight.w700,
@@ -50,7 +59,7 @@ class _AllState extends State<All> {
                       ),
                     ),
                     Text(
-                      all[index*2+1],
+                      all[index * 2 + 1],
                       style: TextStyle(
                         fontFamily: 'SourceSansPro',
                         fontSize: 18,
